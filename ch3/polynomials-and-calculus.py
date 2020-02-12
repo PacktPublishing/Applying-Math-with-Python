@@ -22,3 +22,9 @@ class Polynomial:
         coeffs += [c/i for i, c in enumerate(self.coeffs, start=1)]
         return Polynomial(coeffs)
 
+
+p = Polynomial([1, -2, 1])
+p.differentiate()
+# Polynomial([2, -2])
+p.integrate(constant=1)
+# Polynomial([1.0, 1.0, -1.0, 0.333333333333])

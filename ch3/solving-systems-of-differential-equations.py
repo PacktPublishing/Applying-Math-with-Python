@@ -20,18 +20,15 @@ ax.set_title("Population dynamics for two competing species")
 ax.set_xlabel("P")
 ax.set_ylabel("W")
 
-#plt.show()
-
 
 initial_conditions = np.array([85, 40])
 
 from scipy import integrate
 sol = integrate.solve_ivp(predator_prey_system, (0., 5.), initial_conditions, max_step=0.01)
 
-#fig, ax = plt.subplots()
+
 ax.plot(initial_conditions[0], initial_conditions[1], "ko")
-#ax.set_title("
 ax.plot(sol.y[0, :], sol.y[1, :], "k", linewidth=0.5)
 
-#plt.show()
-fig.savefig("systemodeswithtrajectory.png", dpi=300)
+plt.show()
+
