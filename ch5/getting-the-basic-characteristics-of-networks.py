@@ -23,9 +23,12 @@ print(nx.info(G))
 # Number of edges: 12
 # Average degree: 2.4000
 
-for i in range(1, 7):
-    print(f"Degree of node {i}: {G.degree[i]};\nNeighbors: {G[i]}")
-
+for i in [0, 2, 7]:
+    degree = G.degree[i]
+    print(f"Degree of {i}: {degree}")
+# Degree of 0: 1
+# Degree of 2: 4
+# Degree of 7: 2
 
 components = list(nx.connected_components(G))
 print(components)
@@ -33,8 +36,9 @@ print(components)
 
 density = nx.density(G)
 print("Density", density)
+# Density 0.26666666666666666
 
 is_planar, _ = nx.check_planarity(G)
 print("Is planar", is_planar)
-
+# Is planar True
 
