@@ -19,7 +19,6 @@ Y = -10.0 + 5.0*p_vars["X1"] - 2.0*p_vars["X2"] + residuals
 
 
 fig, (ax1, ax2, ax3) = plt.subplots(1, 3, sharey=True, tight_layout=True)
-
 ax1.scatter(p_vars["X1"], Y)
 ax2.scatter(p_vars["X2"], Y)
 ax3.scatter(p_vars["X3"], Y)
@@ -32,7 +31,7 @@ ax2.set_xlabel("X2")
 ax3.set_title("Y against X3")
 ax3.set_xlabel("X3")
 
-fig.savefig("multiple-predictors.png", dpi=300)
+
 plt.show()
 
 model = sm.OLS(Y, p_vars).fit()

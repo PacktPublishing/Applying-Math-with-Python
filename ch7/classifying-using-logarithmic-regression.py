@@ -8,18 +8,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, roc_curve
 
 
-var1 = np.concatenate([rng.normal(3.0, 1.5, size=50), rng.normal(-4.0, 2.0, size=50)])
-var3 = np.concatenate([rng.normal(-2.0, 2.0, size=50), rng.normal(1.5, 0.8, size=50)])
-
 df = pd.DataFrame({
-    "var1": var1,
+    "var1": np.concatenate([rng.normal(3.0, 1.5, size=50), rng.normal(-4.0, 2.0, size=50)]),
     "var2": rng.uniform(size=100),
-    "var3": var3
+    "var3": np.concatenate([rng.normal(-2.0, 2.0, size=50), rng.normal(1.5, 0.8, size=50)])
 })
 
 
 score = 4.0 + df["var1"] - df["var3"]
-
 Y = score >= 0
 
 
@@ -31,8 +27,7 @@ ax1.set_xlabel("var1")
 ax1.set_ylabel("var3")
 ax1.set_title("Scatter plot of var3 against var1")
 
-fig1.savefig("classification-scatterplot.png", dpi=300)
-#plt.show()
+plt.show()
 
 model = LogisticRegression()
 model.fit(df, Y)

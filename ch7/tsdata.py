@@ -3,11 +3,9 @@ import numpy as np
 import pandas as pd
 import itertools
 
-
-
 from numpy.random import default_rng
 
-__all__ = ["generate_sample_data"]
+
 
 def _get_n(iterable, n):
     return list(itertools.islice(iterable, n))

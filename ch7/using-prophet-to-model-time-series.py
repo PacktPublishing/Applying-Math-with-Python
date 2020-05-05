@@ -17,10 +17,11 @@ df_for_prophet = pd.DataFrame({
 model = Prophet()
 model.fit(df_for_prophet)
 
+
 forecast_df = model.make_future_dataframe(periods=50)
 
-forecast = model.predict(forecast_df)
 
+forecast = model.predict(forecast_df)
 
 
 fig, ax = plt.subplots(tight_layout=True)
@@ -33,6 +34,5 @@ ax.legend()
 ax.set_xlabel("Date")
 ax.set_ylabel("Value")
 
-fig.savefig("prophet-ts-predictions.png", dpi=300)
 
 plt.show()

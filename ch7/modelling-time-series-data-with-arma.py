@@ -12,8 +12,6 @@ ts_ax.set_title("Time series data")
 ts_ax.set_xlabel("Date")
 ts_ax.set_ylabel("Value")
 
-ts_fig.savefig("arma-time-series.png", dpi=300)
-
 
 
 adf_results = sm.tsa.adfuller(sample_ts)
@@ -28,7 +26,6 @@ pacf_ax.set_xlabel("Lags")
 pacf_ax.set_ylabel("Value")
 acf_ax.set_ylabel("Value")
 
-ap_fig.savefig("arma-acf-and-pacf.png", dpi=300)
 
 
 arma_model = sm.tsa.ARMA(sample_ts, order=(1, 1))
@@ -44,14 +41,11 @@ rpacf_ax.set_xlabel("Lags")
 rpacf_ax.set_ylabel("Value")
 racf_ax.set_ylabel("Value")
 
-rap_fig.savefig("arma-residual-acf-pacf.png", dpi=300)
 
 
 fitted = arma_results.fittedvalues
 fitted.plot(c="r", ax=ts_ax, label="Fitted")
 ts_ax.legend()
-ts_fig.savefig("arma-time-series-predicted.png", dpi=300)
-
 
 
 

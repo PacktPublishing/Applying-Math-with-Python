@@ -8,15 +8,12 @@ rng = default_rng(12345)
 
 x = np.linspace(0, 5, 25)
 rng.shuffle(x)
-
 trend = 2.0
 shift = 5.0
-
 y1 = trend*x + shift + rng.normal(0, 0.5, size=25)
 y2 = trend*x + shift + rng.normal(0, 5, size=25)
 
 fig, ax = plt.subplots()
-
 ax.scatter(x, y1, c="b", label="Good correlation")
 ax.scatter(x, y2, c="r", label="Bad correlation")
 ax.legend()
@@ -33,6 +30,8 @@ model2 = sm.OLS(y2, pred_x).fit()
 print(model2.summary())
 
 model_x = sm.add_constant(np.linspace(0, 5))
+
+
 model_y1 = model1.predict(model_x)
 model_y2 = model2.predict(model_x)
 
@@ -41,5 +40,4 @@ ax.plot(model_x[:, 1], model_y1, 'b')
 ax.plot(model_x[:, 1], model_y2, 'r')
 
 
-fig.savefig("linear-regression.png", dpi=300)
 plt.show()
