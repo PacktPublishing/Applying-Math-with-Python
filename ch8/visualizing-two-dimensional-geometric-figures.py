@@ -27,5 +27,6 @@ ax.set_xlim((-1.1, 1.1))
 ax.set_ylim((-1.1, 1.1))
 ax.set_axis_off()
 
+fig.savefig("swiss-cheese-plot.png", dpi=300)
 
 plt.show()
