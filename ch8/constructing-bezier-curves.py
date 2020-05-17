@@ -15,9 +15,7 @@ class Bezier:
     def __call__(self, t):
         n = self.nodes
         t = t.reshape((1, t.size))
-
         vals = [c @ (t**i)*(1-t)**(n-i) for i, c in enumerate(self.coeffs)]
-
         return np.sum(vals, axis=0)
 
 
