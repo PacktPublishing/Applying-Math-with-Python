@@ -38,6 +38,4 @@ v = b_curve(t)
 
 ax.plot(v[0,:], v[1, :])
 
-fig.savefig("bezier-with-controls.png", dpi=300)
-
 plt.show()
