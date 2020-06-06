@@ -24,14 +24,8 @@ ax.set_title("Objective function")
 
 ax.plot_surface(x, y, z, alpha=0.7)
 
-
-
-
 x0 = np.array([-0.5, 1.0])
-
 ax.plot([x0[0]], [x0[1]], func(x0), "r*")
-
-
 
 
 result = optimize.minimize(func, x0, tol=1e-6, method="Nelder-Mead")
@@ -39,6 +33,5 @@ print(result)
 
 
 ax.plot([result.x[0]], [result.x[1]], [result.fun], "r*")
-
 
 plt.show()
