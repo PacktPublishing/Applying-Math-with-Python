@@ -6,7 +6,6 @@ cimport cython
 ctypedef Py_ssize_t Int
 ctypedef np.float64_t Double
 
-
 cdef int in_mandel(Double cx, Double cy, int max_iter):
     cdef Double x = cx
     cdef Double y = cy
@@ -17,17 +16,13 @@ cdef int in_mandel(Double cx, Double cy, int max_iter):
         y2 = y**2
         if (x2 + y2) >= 4:
             return i
-
         y = 2.0*x*y + cy
         x = x2 - y2 + cx
     return max_iter
 
-
-
 @cython.boundscheck(False)
 @cython.wraparound(False)
 def compute_mandel(int N_x, int N_y, int N_iter):
-    
     cdef double xlim_l = -2.5
     cdef double xlim_u = 0.5
     cdef double ylim_l = -1.2
@@ -42,6 +37,4 @@ def compute_mandel(int N_x, int N_y, int N_iter):
     for i in range(N_x):
         for j in range(N_y):
             height[i, j] = in_mandel(x_vals[i], y_vals[j], N_iter)
-
-
     return height
