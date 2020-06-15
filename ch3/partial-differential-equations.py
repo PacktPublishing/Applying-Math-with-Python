@@ -38,10 +38,12 @@ for i in range(steps):
 X, T = np.meshgrid(x, t)
 fig = plt.figure()
 ax = fig.add_subplot(projection="3d")
-ax.plot_surface(T, X, u, cmap="hot")
 
+ax.plot_surface(T, X, u, cmap="hot")
 ax.set_title("Solution of the heat equation")
 ax.set_xlabel("t")
 ax.set_ylabel("x")
 ax.set_zlabel("u")
-fig.savefig("heateqnsurf.png", dpi=300)
+
+plt.show()
+
