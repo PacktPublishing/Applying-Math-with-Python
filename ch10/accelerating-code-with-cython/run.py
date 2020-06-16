@@ -20,8 +20,8 @@ mandel_py = timer(compute_mandel_py, "Python")
 mandel_hy = timer(compute_mandel_hy, "Hybrid")
 mandel_cy = timer(compute_mandel_cy, "Cython")
 
-Nx = 640
-Ny = 480
+Nx = 320
+Ny = 240
 steps = 255
 
 mandel_py(Nx, Ny, steps)
