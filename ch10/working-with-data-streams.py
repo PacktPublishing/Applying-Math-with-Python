@@ -1,37 +1,37 @@
+import faust
 
-import asyncio
-
-from random import Random
-
-MAX_SAMPLES = 1000
-
-async def data_stream():
-    rng = Random(12345)  # seeded for examples
-    
-    for i in range(MAX_SAMPLES):
-        sleep_time = rng.random()*3.
-#        await asyncio.sleep(sleep_time)
-        
-        yield {"event_no": i, "width": max(0.0, rng.gauss(3.0, 0.5))}
+from numpy.random import default_rng
+rng = default_rng(12345)
 
 
-async def check_event(event):
-    event_no  = event["event_no"]
-    width = event["width"]
-   
-    if abs(width - 3.0) > 1.2:
-        print(f"Event {event_no} not within range ({width})")
+app = faust.App("sample", broker="kafka://localhost")
+
+
+class Record(faust.Record):
+    id_string: str
+    value: float
+
+topic = app.topic("sample-topic", value_type=Record)
+
+@app.agent(topic)
+async def process_record(records):
+    async for record in records:
+        print(f"Got {record.id_string}: {record.value}")
 
 
 
-async def process_stream():
-    async for event in data_stream():
-       asyncio.create_task(check_event(event))
+@app.timer(interval=1.0)
+async def producer1(app):
+    await process_record.send(
+        value=Record(id_string="producer 1", value=rng.uniform(0, 2))
+    )
+
+@app.timer(interval=2.0)
+async def producer2(app):
+    await process_record.send(
+        value=Record(id_string="producer 2", value=rng.uniform(0, 5))
+    )
 
 
 
-
-asyncio.run(process_stream())
-
-
-
+app.main()
