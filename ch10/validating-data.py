@@ -1,17 +1,22 @@
 import csv
 import cerberus
 
-schema = {"rows": {
-    "type": "list",
+float_schema = {"type": "float", "coerce": float, "min": -1.0, "max": 1.0}
+
+item_schema = {
+    "type": "dict",
     "schema": {
-            "type": "dict",
-            "schema": {
-                "id": {"type": "string"},
-                "number": {"type": "integer", "coerce": int},
-                "lower": {"type": "float", "coerce": float, "min": -1.0, "max": 1.0},
-                "upper": {"type": "float", "coerce": float, "min": -1.0, "max": 1.0},
-            }
-        }
+        "id": {"type": "string"},
+        "number": {"type": "integer", "coerce": int},
+        "lower": float_schema,
+        "upper": float_schema,
+    }
+}
+
+schema = {
+    "rows": {
+        "type": "list",
+        "schema": item_schema
     }
 }
 
