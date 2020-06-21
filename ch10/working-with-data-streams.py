@@ -7,7 +7,7 @@ rng = default_rng(12345)
 app = faust.App("sample", broker="kafka://localhost")
 
 
-class Record(faust.Record):
+class Record(faust.Record, serializer="json"):
     id_string: str
     value: float
 
@@ -19,16 +19,17 @@ async def process_record(records):
         print(f"Got {record.id_string}: {record.value}")
 
 
-
 @app.timer(interval=1.0)
 async def producer1(app):
-    await process_record.send(
+    await app.send(
+        "sample-topic",
         value=Record(id_string="producer 1", value=rng.uniform(0, 2))
     )
 
 @app.timer(interval=2.0)
 async def producer2(app):
-    await process_record.send(
+    await app.send(
+        "sample-topic",
         value=Record(id_string="producer 2", value=rng.uniform(0, 5))
     )
 
