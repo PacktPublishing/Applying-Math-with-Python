@@ -40,5 +40,5 @@ fig.savefig("histograms.png", dpi=300)
 plt.show()
 
 
-print(basic_descriptive)
+print(descriptive)
 
