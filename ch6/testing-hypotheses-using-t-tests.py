@@ -20,7 +20,7 @@ print(f"t stat: {t_statistic}, p value: {p_value}")
 
 
 if p_value <= significance:
-    print("Accept H0: mu = 2.0")
-else:
     print("Reject H0 in favour of H1: mu != 2.0")
-# Accept H0: mu = 2.0
+else:
+    print("Accept H0: mu = 2.0")
+# Reject H0 in favour of H1: mu != 2.0 
