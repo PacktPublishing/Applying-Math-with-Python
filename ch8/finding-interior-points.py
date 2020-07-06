@@ -18,8 +18,11 @@ p1 = Point(0.0, 0.0)
 p2 = Point(-1.0, -0.75)
 
 ax.plot(0.0, 0.0, "k*")
+ax.annotate("p1", (0.0, 0.0), (0.05, 0.0))
 ax.plot(-0.8, -0.75, "k*")
+ax.annotate("p2", (-0.8, -0.75), (-0.8 + 0.05, -0.75))
 
+fig.savefig("interior-points-annotated-points.png", dpi=300)
 plt.show()
 
 print("p1 inside polygon?", polygon.contains(p1))

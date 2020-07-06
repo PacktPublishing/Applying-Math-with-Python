@@ -32,5 +32,3 @@ ax.add_collection(col)
 
 
 plt.show()
-
-  
