@@ -5,9 +5,9 @@ import nashpy as nash
 
 
 rps_p1 = np.array([
-    [ 0,  1, -1],  # rock payoff
-    [-1,  0,  1],  # papper payoff
-    [ 1, -1,  0]   # scissors payoff
+    [ 0, -1,  1],  # rock payoff
+    [ 1,  0, -1],  # papper payoff
+    [-1,  1,  0]   # scissors payoff
 ])
 
 rps_p2 = rps_p1.transpose()
