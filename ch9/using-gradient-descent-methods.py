@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-from scipy.optimize import minimize_scalar
 
 
 def descend(func, x0, grad, bounds, tol=1e-8, max_iter=100):
