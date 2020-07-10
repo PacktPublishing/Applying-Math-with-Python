@@ -17,8 +17,9 @@ x, y = np.meshgrid(x_r, y_r)
 z = func([x, y])
 
 
-fig = plt.figure()
+fig = plt.figure(tight_layout=True)
 ax = fig.add_subplot(projection="3d")
+ax.tick_params(axis="both", which="major", labelsize=9)
 ax.set(xlabel="x", ylabel="y", zlabel="z")
 ax.set_title("Objective function")
 
@@ -26,7 +27,6 @@ ax.plot_surface(x, y, z, alpha=0.7)
 
 x0 = np.array([-0.5, 1.0])
 ax.plot([x0[0]], [x0[1]], func(x0), "r*")
-
 
 result = optimize.minimize(func, x0, tol=1e-6, method="Nelder-Mead")
 print(result)
