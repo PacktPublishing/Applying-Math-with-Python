@@ -1,13 +1,13 @@
 import numpy as np
 from scipy import sparse
 
-T = sparse.dia_matrix(([[-1]*5, [2]*5, [-1]*5], [-1, 0, 1]), shape=(5, 5))
+T = sparse.diags([-1, 2, -1], (-1, 0, 1), shape=(5, 5), format="csr")
 T.toarray()
 # array([[ 2, -1,  0,  0,  0],
-         [-1,  2, -1,  0,  0],
-         [ 0, -1,  2, -1,  0],
-         [ 0,  0, -1,  2, -1],
-         [ 0,  0,  0, -1,  2]])
+#        [-1,  2, -1,  0,  0],
+#        [ 0, -1,  2, -1,  0],
+#        [ 0,  0, -1,  2, -1],
+#        [ 0,  0,  0, -1,  2]])
 
 from scipy.sparse import linalg
 linalg.spsolve(T.tocsr(), np.array([1, 2, 3, 4, 5]))

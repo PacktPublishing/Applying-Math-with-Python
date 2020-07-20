@@ -17,3 +17,20 @@ math.log(10, 10)  # 1.0
 
 math.gamma(5)  # 24.0
 math.erf(2)  # 0.9953222650189527
+
+
+
+math.comb(5, 2) # 10
+math.factorial(5) # 120
+
+
+
+
+math.gcd(2, 4) # 2
+math.gcd(2, 3) # 1
+
+
+
+nums = [0.1]*10 # list containing 0.1 ten times
+sum(nums) # 0.9999999999999999
+math.fsum(nums) # 1.0

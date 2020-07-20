@@ -1,7 +1,0 @@
-import numpy as np
-
-ary = np.array([1, 2, 3, 4])  # array([1, 2, 3, 4])
-
-ary[0]  # 1
-ary[2]  # 3
-ary[::2]  # array([1, 3])
