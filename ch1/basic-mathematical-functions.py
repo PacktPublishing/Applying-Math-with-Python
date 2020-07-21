@@ -3,10 +3,10 @@ import math
 
 math.sqrt(4)  # 2.0
 
-theta = 0.7854
-math.cos(theta)  # 0.7071054825112363
-math.sin(theta)  # 0.7071080798594735
-math.tan(theta)  # 1.0000036732118496
+theta = math.pi / 4
+math.cos(theta)  # 0.7071067811865476
+math.sin(theta)  # 0.7071067811865475
+math.tan(theta)  # 0.9999999999999999
 
 math.asin(-1)  # -1.5707963267948966
 math.acos(-1)  # 3.141592653589793
