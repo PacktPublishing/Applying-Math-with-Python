@@ -26,7 +26,7 @@ df["bimodal"].plot(kind="hist", title="Bimodal", ax=ax3, bins=20)
 
 descriptive = df.describe()
 descriptive.loc["kurtosis"] = df.kurtosis()
-
+print(descriptive)
 
 uniform_mean = descriptive.loc["mean", "uniform"]
 normal_mean = descriptive.loc["mean", "normal"]
@@ -36,9 +36,8 @@ ax1.vlines(uniform_mean, 0, 20)
 ax2.vlines(uniform_mean, 0, 25)
 ax3.vlines(uniform_mean, 0, 12)
 
-fig.savefig("histograms.png", dpi=300)
 plt.show()
 
 
-print(descriptive)
+
 
