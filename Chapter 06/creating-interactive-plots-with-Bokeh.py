@@ -11,13 +11,6 @@ date_range = pd.date_range("2020-01-01", periods=50)
 data = np.add.accumulate(rng.normal(0, 3, size=50))
 series = pd.Series(data, index=date_range)
 
-fig, ax = plt.subplots()
-series.plot(ax=ax, title="Time series data")
-ax.set_xlabel("date")
-ax.set_ylabel("value")
-
-fig.savefig("bokeh-plot.png", dpi=300)
-
 
 bk.output_file("sample.html")
 
