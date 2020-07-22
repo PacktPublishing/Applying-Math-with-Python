@@ -10,7 +10,7 @@ def signal(t, freq_1=4.0, freq_2=7.0):
 
 
 state = np.random.RandomState(12345)
-sample_size = 2<<7
+sample_size = 2**7
 sample_t = np.linspace(0, 4, sample_size, dtype=np.float64)
 sample_y = signal(sample_t) + state.standard_normal(sample_size) 
 sample_d = 4. / (sample_size - 1) # Spacing for linspace array
