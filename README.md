@@ -46,8 +46,7 @@ With the following software and hardware list you can run all code files present
 ## Code in Action
 
 Click on the following link to see the Code in Action:
-
-[YouTube](https://www.youtube.com/playlist?list=PLeLcvrwLe186jdI_AZlqik9ds1g0Cke86)
+[YouTube]  (https://www.youtube.com/playlist?list=PLeLcvrwLe186jdI_AZlqik9ds1g0Cke86)
 
 ### Related products <Other books you may enjoy>
 * Linux: Powerful Server Administration [[Packt]](https://www.packtpub.com/networking-and-servers/linux-powerful-server-administration?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1788293770)
