@@ -22,6 +22,5 @@ ax1.set_ylabel("Value")
 df["diffs"].plot(kind="hist", ax=ax2, title="Histogram of diffs")
 ax2.set_xlabel("Difference")
 
-fig.savefig("walk-and-hist.png", dpi=300)
 
 plt.show()
