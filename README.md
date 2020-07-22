@@ -50,9 +50,9 @@ Click on the following link to see the Code in Action:
 [YouTube]  (https://www.youtube.com/playlist?list=PLeLcvrwLe186jdI_AZlqik9ds1g0Cke86)
 
 ### Related products <Other books you may enjoy>
-* Linux: Powerful Server Administration [[Packt]](https://www.packtpub.com/networking-and-servers/linux-powerful-server-administration?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Python for Finance Cookbook [[Packt]](https://www.packtpub.com/data/python-for-finance-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789618518) [[Amazon]](https://www.amazon.com/dp/1789618517)
 
-* Linux Device Drivers Development [[Packt]](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* The Python Workshop [[Packt]](https://www.packtpub.com/programming/the-python-workshop?utm_source=github&utm_medium=repository&utm_campaign=9781839218859) [[Amazon]](https://www.amazon.com/dp/1839218851)
 
 ## Get to Know the Author
 **Sam Morley**
