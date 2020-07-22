@@ -35,3 +35,6 @@ if p_A_C > significance:
 
 if p_B_C > significance:
     print("Significant differences between B and C, p value", p_B_C)
+else:
+    print("No significant differences between B and C, p value", p_B_C)
+# No significant differences between B and C, p value 0.037610047044153536
