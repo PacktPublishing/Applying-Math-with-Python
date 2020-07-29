@@ -56,7 +56,7 @@ Click on the following link to see the Code in Action:
 
 ## Get to Know the Author
 **Sam Morley**
-is an experienced lecturer in mathematics and a researcher in pure mathematics. He is currently a lecturer in mathematics at the University of East Anglia and has previously lectured at Nottingham Trent University. His research interests lie within the functional analysis, especially Banach algebras. Sam has a firm commitment to providing high quality, inclusive, and enjoyable teaching with the aim of inspiring his students and spreading his enthusiasm for mathematics.
+is an experienced lecturer in mathematics and a researcher in pure mathematics. He is currently a research software engineer at the University of Oxford working on the DataSig project. He was previously a lecturer in mathematics at the University of East Anglia and Nottingham Trent University. His research interests lie in functional analysis, especially Banach algebras. Sam has a firm commitment to providing high-quality, inclusive, and enjoyable teaching, with the aim of inspiring his students and spreading his enthusiasm for mathematics.
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
