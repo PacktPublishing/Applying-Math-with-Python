@@ -47,7 +47,7 @@ With the following software and hardware list you can run all code files present
 
 Click on the following link to see the Code in Action:
 
-[YouTube]  (https://www.youtube.com/playlist?list=PLeLcvrwLe186jdI_AZlqik9ds1g0Cke86)
+[YouTube](https://www.youtube.com/playlist?list=PLeLcvrwLe186jdI_AZlqik9ds1g0Cke86)
 
 ### Related products <Other books you may enjoy>
 * Python for Finance Cookbook [[Packt]](https://www.packtpub.com/data/python-for-finance-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789618518) [[Amazon]](https://www.amazon.com/dp/1789618517)
